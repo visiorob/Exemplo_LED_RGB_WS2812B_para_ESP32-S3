@@ -1,0 +1,26 @@
+menu "Controlador do LED RGB"
+
+    config LED_GPIO_NUM
+        int "Qual GPIO está o LED RGB"
+        default 33 if IDF_TARGET_ESP32
+        default 33
+        help
+            Esta opção permite selecionar a GPIO onde está o LED RGB.
+
+    config LED_NUMBERS
+        int "Quantos LEDs RGB o projeto tem"
+        default 1 if IDF_TARGET_ESP32
+        default 1
+        help
+            Esta opção permite indicar a quantidade de LEDs RGB tem no projeto.
+
+    config LED_RESOLUTION_HZ
+        int "Qual é a frequência do clock para o RMT"
+        default 10000000
+        help
+            Esta opção permite indicar a frequência do clock para o sistema do RMT.
+            No caso do LED WS2812B precisamos de uma resolução alta, algo como cada
+            pulso em torno de 0.1us, por isso a resolução padrão é de 10000000Hz ou
+            10MHz.
+
+endmenu

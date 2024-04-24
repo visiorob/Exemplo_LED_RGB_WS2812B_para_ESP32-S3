@@ -30,3 +30,12 @@
 *.exe
 *.out
 *.app
+
+# Arquivos do ESP-IDF
+/sdkconfig
+/sdkconfig.old
+/component.mk
+/CMakeLists.txt.user
+/.vscode/
+/.idea/
+/build/
