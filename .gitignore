@@ -40,3 +40,4 @@
 /.idea/
 /.devcontainer/
 /build/
+debug.log
